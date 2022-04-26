@@ -7,5 +7,5 @@ first_page = pdf_read.getPage(0)
 word = first_page.extractText()
 
 words_list = word.split()
-print(pdf_read)  #first_page.extractText()
+print(first_page.extractText())  #first_page.extractText()
 
