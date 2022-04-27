@@ -9,7 +9,7 @@ class Persona():
 
 class Empleado(Persona):
     def __init__(self, salario, antiguedad, nombre, edad, lugar_residencia):
-        super().__init__(nombre, edad, lugar_residencia)
+        super().__init__(nombre, edad, lugar_residencia) # La funcion super() llama los metodos de la superclase.
         self.salario= salario
         self.antiguedad= antiguedad
 
