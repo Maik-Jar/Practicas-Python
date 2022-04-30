@@ -22,13 +22,13 @@ for line in file_manager:
     emails[word[1]] = emails.get(word[1], 0) + 1
 
 lst= list(emails.keys())
-contador= 0
+valor= 0
 llave = None
 
 for i in lst:
 
-    if emails[i] > contador:
-        contador = emails[i]
+    if emails[i] > valor:
+        valor = emails[i]
         llave = i
 
 print(llave, emails[llave])
