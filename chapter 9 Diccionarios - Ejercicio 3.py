@@ -16,7 +16,8 @@ for line in file_manager:
 
     word= line.split()
 
-    if len(word) == 0 or word[0] != 'From' or len(word) < 2 : continue
+    if len(word) == 0 or word[0] != 'From' or len(word) < 2 : 
+        continue
     #print(line) 
     days[word[1]] = days.get(word[1], 0) + 1
 
