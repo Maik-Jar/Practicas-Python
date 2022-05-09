@@ -56,14 +56,14 @@ class BicicletaElenctrica(VEelectricos):
         return super().estado()
 
 ####################################################################
-miMoto= Moto('Honda', 'Lead 100')
-miMoto.calibrando()
-miMoto.estado()
+#miMoto= Moto('Honda', 'Lead 100')
+#miMoto.calibrando()
+#miMoto.estado()
 ####################################################################
-miFurgoneta= Furgoneta('Pegout', 'Kangoo')
-miFurgoneta.arrancar()
-miFurgoneta.estado()
-print(miFurgoneta.carga(True))
+#miFurgoneta= Furgoneta('Pegout', 'Kangoo')
+#miFurgoneta.arrancar()
+#miFurgoneta.estado()
+#print(miFurgoneta.carga(True))
 ####################################################################
-miBici= BicicletaElenctrica('tesla', 'cic')
-miBici.estado()
+#miBici= BicicletaElenctrica('tesla', 'cic')
+#miBici.estado()
