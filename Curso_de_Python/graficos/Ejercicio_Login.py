@@ -1,8 +1,5 @@
 from tkinter import *
 
-vUsername= StringVar
-vPassword= StringVar
-
 def login(username, password):
 
     vCredenciales= dict()
@@ -16,18 +13,18 @@ def login(username, password):
     
         vCredenciales[usurario[0]]= usurario[1]
 
-    
-    if vCredenciales[usurario[0]]== username.get():
-        print(vCredenciales)
+    if vCredenciales['username']== username and vCredenciales['password']== password:
         
         root2= Tk()
         root2.title('Acceso!!')
         root2.resizable(0,0)
 
         miFrame2= Frame(root2)
+        miFrame2.config(bg='red' ,width='650', height='350')
+        miFrame2.pack()
 
-        lbMensaje= Label(miFrame2, text='Has podido acceder!!')
-        lbMensaje.pack()
+        lbMensaje= Label(miFrame2, text='Has podido acceder!!', font=5, fg='black')
+        lbMensaje.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
 
         root2.mainloop()
 
@@ -35,6 +32,9 @@ def login(username, password):
 root= Tk()
 root.title('Login')
 root.resizable(0,0)
+
+vUsername= StringVar()
+vPassword= StringVar()
 
 # Frame
 miFrame= Frame(root)
@@ -50,13 +50,13 @@ lbPassword.grid(row=1, column=0, padx=5, pady=5, sticky='e')
 
 # Entry
 tfUsername= Entry(miFrame)
-tfPassword= Entry(miFrame)
+tfPassword= Entry(miFrame, textvariable= vPassword)
 tfPassword.config(show='*')
 tfUsername.grid(row=0, column=1, padx=5, pady=5)
 tfPassword.grid(row=1, column=1, padx=5, pady=5,)
 
 # Button
-btEntrar= Button(root, text='Entrar', command=login(tfUsername, tfPassword))
-btEntrar.pack()
+btEntrar= Button(miFrame, text='Entrar', command=lambda:login(tfUsername.get(), tfPassword.get()))
+btEntrar.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
 root.mainloop()
